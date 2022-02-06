@@ -1,5 +1,34 @@
 {
   "dependencies": {
-    "discord.js": "^13.6.0"
-  }
+    "@discordjs/builders": "^0.12.0",
+    "@discordjs/rest": "^0.3.0",
+    "discord-api-types": "^0.26.1",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "ffmpeg-static": "^4.4.1",
+    "fs": "^0.0.1-security",
+    "save-dev": "^0.0.1-security",
+    "util": "^0.12.4"
+  },
+  "name": "basecodeiamnoabot",
+  "description": "Hola Bienvenido al codigo base de IamNotABot, con todo esto se baso para crear al version v13 de discord.js, Mas Adelante Publicaremos la base de la version v12.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EstebanSaiyanGames/BaseCodeIamNoABot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EstebanSaiyanGames/BaseCodeIamNoABot/issues"
+  },
+  "homepage": "https://github.com/EstebanSaiyanGames/BaseCodeIamNoABot#readme"
 }
