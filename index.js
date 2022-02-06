@@ -13,7 +13,24 @@ require('dotenv').config();
 
 //const
 const Discord = require("discord.js")
-const client = new Discord.Client({ intents: 32509 })
+const client = new Discord.Client({ 
+    intents: [
+    "GUILDS",
+    "GUILD_MEMBERS",
+    "GUILD_BANS",
+    "GUILD_INTEGRATIONS",
+    "GUILD_WEBHOOKS",
+    "GUILD_INVITES",
+    "GUILD_VOICE_STATES",
+    "GUILD_PRESENCES",
+    "GUILD_MESSAGES",
+    "GUILD_MESSAGE_REACTIONS",
+    "GUILD_MESSAGE_TYPING",
+    "DIRECT_MESSAGES",
+    "DIRECT_MESSAGE_REACTIONS",
+    "DIRECT_MESSAGE_TYPING",
+],
+})
 const config = require("./config.json")
 
 const fs = require('fs');
@@ -33,9 +50,9 @@ for(const file of slashcommandsFiles){
 //handle commands
 
 client.commands = new Discord.Collection()
-let carpetas = fs.readdirSync('./commands/').map((subCarpetas) => {
-  const archivos = fs.readdirSync(`./commands/${subCarpetas}`).map((comandos) => {
-    let comando = require(`./commands/${subCarpetas}/${comandos}`)
+let carpetas = fs.readdirSync('./Commands/').map((subCarpetas) => {
+  const archivos = fs.readdirSync(`./Commands/${subCarpetas}`).map((comandos) => {
+    let comando = require(`./Commands/${subCarpetas}/${comandos}`)
     client.commands.set(comando.name, comando)
   })
 })
