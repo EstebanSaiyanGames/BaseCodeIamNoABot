@@ -59,32 +59,32 @@ let carpetas = fs.readdirSync('./Commands/').map((subCarpetas) => {
 
 
 client.on("ready", message => {
-const { REST } = require("@discordjs/rest")
-const { Routes } = require("discord-api-types/v9")
-const commands = []
-const slashcommandsFiles = fs.readdirSync("./SlashCmds").filter(file => file.endsWith(".js"))
+  const { REST } = require("@discordjs/rest")
+  const { Routes } = require("discord-api-types/v9")
+  const commands = []
+  const slashcommandsFiles = fs.readdirSync("./SlashCmds").filter(file => file.endsWith(".js"))
 
-for(const file of slashcommandsFiles){
-  const slash = require(`./SlashCmds/${file}`)
-  commands.push(slash.data.toJSON())
-}
-
-const rest = new REST({ version: "9" }).setToken(config.token)
-
-createSlash()
-
-async function createSlash(){
-  try{
-    await rest.put(
-      Routes.applicationCommands(config.clientId), {
-        body: commands
-      }
-    )
-    console.log("Slash Commands Is loaded of Json!")
-  } catch(e) {
-    console.log(e)
+  for(const file of slashcommandsFiles){
+    const slash = require(`./SlashCmds/${file}`)
+    commands.push(slash.data.toJSON())
   }
-}
+
+  const rest = new REST({ version: "9" }).setToken(config.token)
+
+  createSlash()
+
+  async function createSlash(){
+    try{
+      await rest.put(
+        Routes.applicationCommands(config.clientId), {
+          body: commands
+        }
+        )
+        console.log("Slash Commands Is loaded of Json!")
+      } catch(e) {
+        console.log(e)
+      }
+    }
 
 })
 

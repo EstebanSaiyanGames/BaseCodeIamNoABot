@@ -40,6 +40,12 @@ Los editores de codigo son los encargado De que puedas editar los archivos mas f
 
 entre otros.
 
+# Importante
+
+Este Codigo esta especificamente completo para usar en Visual Studio Code, para usarlo en replit, solo crea un archivo Obligatoriamente llamado .replit y pon "run="npm start"" (sin las primeras comillas), y solo con darle run el bot ya se prendera.
+
+
+
 # Final
 
 Este es el final de como empezar un bot de discord con esta base
