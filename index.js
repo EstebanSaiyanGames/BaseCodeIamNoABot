@@ -121,9 +121,16 @@ client.on("messageCreate", async (message) => {
     try {
       cmd.execute(client, message, args)
     } catch (e) {
+
+      const embedError = new Discord.MessageEmbed()
+      .setTitle(":x: | Oops")
+      .setDescription("el comando **" + command + "** es invalido o no existe, intentelo de nuevo")
+      .setColor("RED")
+      .setTimestamp()
+      .setFooter("powered by ⚡ImNotABot⚡ support")
   
-  return;
-}
+     return;
+  }
 
 }
 });
