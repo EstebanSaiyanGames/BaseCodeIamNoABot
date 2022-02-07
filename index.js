@@ -118,21 +118,37 @@ client.on("messageCreate", async (message) => {
 
   let cmd = client.commands.find((c) => c.name === command || c.alias && c.alias.includes(command));
   if(cmd){
+
     try {
       cmd.execute(client, message, args)
-    } catch (e) {
+    } catch (e) {  
 
-      const embedError = new Discord.MessageEmbed()
-      .setTitle(":x: | Oops")
-      .setDescription("el comando **" + command + "** es invalido o no existe, intentelo de nuevo")
-      .setColor("RED")
-      .setTimestamp()
-      .setFooter("powered by ⚡ImNotABot⚡ support")
-  
+
      return;
   }
 
 }
+
+if(!cmd){
+
+  if(config.commandError === "OFF") return;
+  if(config.commandError === "ON"){
+
+    if (message.content === prefix) return;
+
+    const embedError = new Discord.MessageEmbed()
+    .setTitle(":x: | Oops")
+    .setDescription("el comando **" + command + "** es invalido o no existe, intentelo de nuevo")
+    .setColor("RED")
+    .setTimestamp()
+    .setFooter("powered by ⚡ImNotABot⚡ support")
+
+    message.channel.send({ embeds: [embedError] })
+
+  }
+
+}
+
 });
 
 client.login(config.token)
