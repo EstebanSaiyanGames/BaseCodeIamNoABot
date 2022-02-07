@@ -6,11 +6,11 @@ module.exports = {
 
   data: new SlashCommandBuilder()
   .setName("ping")
-  .setDescription("ping del bot"),
+  .setDescription("comando ping"),
 
   async run(client, interaction){
 
-    interaction.reply({ content: "ping del bot: " + client.ws.ping + "!!" })
+    interaction.reply({ content: "ping del bot: **" + client.ws.ping + "**!!" })
     
   }
 
