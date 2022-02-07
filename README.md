@@ -78,4 +78,4 @@ Este es el final de como empezar un bot de discord con esta base
 
 # Version:
 
-1.2.0
+1.3.0
