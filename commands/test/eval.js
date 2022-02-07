@@ -16,7 +16,7 @@ execute(client, message, args){
 
   try{
     const evaled = eval(command)
-    let palabras = ["token", "destroy", "kick", "ban"]
+    let palabras = ["token", "destroy"]
     if(palabras.some(word => message.content.toLowerCase().includes(word))) return message.reply("estas palabras estan prohibidas")
     const embedEval = new Discord.MessageEmbed()
     .setColor("RANDOM")
