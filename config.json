@@ -2,5 +2,6 @@
     "clientId": "CLIENT_ID",
     "token": "TOKEN_BOT",
     "prefix": "BOT_PREFIX",
-    "owner": "YOUR_DISCORD_ID"
+    "owner": "YOUR_DISCORD_ID",
+    "commandError": "OFF/ON"
 }
