@@ -69,7 +69,13 @@ module.exports = {
 
 }
 
-5.- Estaremos Actualizado el codigo, estate atento a las actualizaciones
+5.- Estaremos Actualizado el codigo, estate atento a las actualizaciones.
+
+6.- Si estas en Visual Necesitas decargar node.js: https://nodejs.org/es/ , si en caso estas en replit, esta todo bien, el node estara incluido en el package.json.
+
+7.- La Configuración de config.json es muy importante, Sin ello, el bot no va a funcionar, tienes que poner los datos correctos, un ejemplo de Token de bot seria: OTQwNjQ1ODM1NzA2ODg0MDk2.YgKasw.WB4vPVkXKVICoZba92asmdrAdZA, el client seria: 940645835706884096, el prefix seria: !, owner seria: 736986380663783476, y commandError seria: ON o OFF. (los datos son reales, pero el bot estara en privado)
+
+8.- Si nesecitas mas ayuda y no sabes hacer uno, usa /botmaker del bot (IamNotABot) y en token y client, pones Null o que no sabes!
 
 # Final
 
@@ -78,4 +84,4 @@ Este es el final de como empezar un bot de discord con esta base
 
 # Version:
 
-1.3.0
+1.4.0
