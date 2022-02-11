@@ -89,7 +89,19 @@ client.on("ready", message => {
 })
 
 client.on("ready", message => {
+
+  //Mensaje Cuando el bot este en linea
   console.log("bot: " + client.user.tag + ", Powered by ⚡ImNotABot⚡ Support")
+
+  //prensencia
+
+  function presence() {
+    client.user.setPresence({ activities: [{ name: "Powered By ⚡ImNotABot⚡", type: "PLAYING" }], status: "online" })
+  }
+  presence().then(msg => {
+    console.log("Prensencia Activada!")
+  })
+
 })
 
 client.on("interactionCreate", async (interaction) => {
