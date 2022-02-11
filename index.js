@@ -53,6 +53,7 @@ client.commands = new Discord.Collection()
 let carpetas = fs.readdirSync('./Commands/').map((subCarpetas) => {
   const archivos = fs.readdirSync(`./Commands/${subCarpetas}`).map((comandos) => {
     let comando = require(`./Commands/${subCarpetas}/${comandos}`)
+    console.log(`Command - ${comandos} Loaded!`)
     client.commands.set(comando.name, comando)
   })
 })
