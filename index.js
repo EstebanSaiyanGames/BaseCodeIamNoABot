@@ -99,9 +99,8 @@ client.on("ready", message => {
   function presence() {
     client.user.setPresence({ activities: [{ name: "Powered By ⚡ImNotABot⚡", type: "PLAYING" }], status: "online" })
   }
-  presence().then(msg => {
-    console.log("Prensencia Activada!")
-  })
+  presence()
+  console.log("Prensencia Activada!")
 
 })
 
