@@ -1,7 +1,7 @@
 {
     "clientId": "CLIENT_ID",
     "token": "TOKEN_BOT",
-    "prefix": "BOT_PREFIX",
-    "owner": "YOUR_DISCORD_ID",
-    "commandError": "OFF/ON"
+    "prefix": "PREFIX",
+    "owner": "OWNER_ID",
+    "commandError": "ON/OFF"
 }
