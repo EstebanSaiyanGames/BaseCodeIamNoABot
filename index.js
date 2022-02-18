@@ -146,7 +146,7 @@ if(!cmd){
   if(config.commandError === "OFF") return;
   if(config.commandError === "ON"){
 
-    if (message.content === prefix) return;
+    if(!message.content === prefix) return;
 
     const embedError = new Discord.MessageEmbed()
     .setTitle(":x: | Oops")
