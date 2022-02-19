@@ -12,6 +12,8 @@ app.listen(port);
 require('dotenv').config();
 
 //const
+
+require('./app.js')
 const Discord = require("discord.js")
 const client = new Discord.Client({ 
     intents: [
