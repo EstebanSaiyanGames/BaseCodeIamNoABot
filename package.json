@@ -3,6 +3,7 @@
     "@discordjs/builders": "^0.12.0",
     "@discordjs/rest": "^0.3.0",
     "discord-api-types": "^0.26.1",
+    "discord-rpc": "^4.0.1",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
@@ -15,7 +16,6 @@
   "description": "Hola Bienvenido al codigo base de IamNotABot, con todo esto se baso para crear al version v13 de discord.js, Mas Adelante Publicaremos la base de la version v12.",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ."
